@@ -1,0 +1,25 @@
+.navbar{
+
+    &__items{
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        list-style: none;
+        align-items: center;
+    }
+
+    &__item{
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__logo{
+        width: 67px;
+        height: 67px;
+    }
+}
