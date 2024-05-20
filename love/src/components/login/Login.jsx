@@ -34,6 +34,7 @@ export default function Login() {
         <input className='login__inputEmail' type="email" placeholder='EMAIL' value={email} onChange={(e) => setEmail(e.target.value)} />
         <input className='login__inputPassword' type="password" placeholder='PASSWORD' value={password} onChange={(e) => setPassword(e.target.value)} />
         <button className='login__buttonSubmit' type='submit'>LOGIN</button>
+        <button className='login__buttonSignup' onClick={() => navigate('/signup')}>CREATE NEW USER</button>
       </form>
     </div>
   )
