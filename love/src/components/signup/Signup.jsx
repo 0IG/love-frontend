@@ -1,9 +1,12 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const naviagte = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -11,6 +14,7 @@ export default function Signup() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log('user', user);
+        naviagte('/')
       })
       .catch((error) => {
         const errorCode = error.code;
