@@ -1,0 +1,22 @@
+.photos{
+    border: 1px solid #000;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    &__photo{
+        display: inline-flex;
+        width: fit-content;
+        height: 15vh;
+        margin: 10px;
+        border: 1px solid red;
+    }
+
+    &__image{
+        display: grid;
+        max-width: autopx;
+        border: 1px solid magenta;
+        height: auto;
+    }
+
+}
