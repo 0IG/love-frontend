@@ -7,14 +7,14 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523,
+  lat: 40.7543,
+  lng: -73.9996,
 };
 
 export default function Maps() {
   return (
     <LoadScript googleMapsApiKey={import.meta.VITE_GOOGLE_MAPS_API_KEY}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
         {/* Child components, such as markers, info windows, etc. */}
       </GoogleMap>
     </LoadScript>
