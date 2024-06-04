@@ -4,6 +4,7 @@ import { UserContext } from "../context/userContext/UserContext";
 import "./Navbar.scss";
 
 export default function Navbar() {
+  const { user } = useContext(UserContext);
   const authenticatedUser = useContext(UserContext);
   console.log(`Navbar:`, authenticatedUser);
 
@@ -31,7 +32,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link to="/login" className="navbar__item">
-              {authenticatedUser ? `ACCOUNT` : "LOGIN"}
+              {authenticatedUser.user ? "ACCOUNT" : "LOGIN"}
             </Link>
           </li>
           <li>
