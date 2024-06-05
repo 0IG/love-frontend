@@ -6,8 +6,6 @@ import "./Navbar.scss";
 export default function Navbar() {
   const { user } = useContext(UserContext);
   const authenticatedUser = useContext(UserContext);
-  console.log(`Navbar:`, authenticatedUser);
-
   return (
     <div className="navbar">
       <div className="navbar__container">

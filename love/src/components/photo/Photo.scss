@@ -1,7 +1,22 @@
-.photos{
+.photo{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border: 1px solid black;
+    height: 250px;
+    width: 420px;
+
+    &__descContainer{
+        border: 1px solid black;
+        height: 60px;
+        width: 420px;
+        margin-top: 73px;
+    }
+
+    &__img{
+        display: flex;
+        max-width: 420px;
+        margin-left: 1px;
+        max-height: auto;
+    }
 }

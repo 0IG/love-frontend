@@ -1,13 +1,23 @@
 import React from "react";
-
-export default function Photo() {
+import "./Photo.scss";
+export default function Photo({ picture, index }) {
+  const API = import.meta.env.VITE_LOCAL_API;
+  const handleImage = (index) => {
+    return `${API}/photos/${index}`;
+  };
+  console.log(handleImage(index));
+  const placeholder =
+    "https://t3.ftcdn.net/jpg/04/39/83/12/360_F_439831247_8hD04tJakItDaMKaKUFfsjhN18hMt2os.jpg";
   return (
     <div className="photo">
-      <img
-        src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
-        alt="photo"
-        className="photo__image"
-      />
+      <div className="photo__container">
+        <div className="photo__imageContainer">
+          <img className="photo__img" src={placeholder}></img>
+        </div>
+        <div className="photo__descContainer">
+          <div className="photo__description"></div>
+        </div>
+      </div>
     </div>
   );
 }
