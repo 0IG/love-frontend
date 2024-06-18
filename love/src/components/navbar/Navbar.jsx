@@ -29,6 +29,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            {/* If user is authenticated, display "ACCOUNT", else display "LOGIN" */}
             <Link
               to={authenticatedUser.user ? "/signout" : "/login"}
               className="navbar__item"
