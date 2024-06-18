@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Photo from "../photo/Photo";
 import axios from "axios";
 
-// Styles
 import "./Photos.scss";
 
 export default function Photos() {
@@ -18,8 +17,7 @@ export default function Photos() {
       .catch((error) => {
         console.log(error);
       });
-  }),
-    [];
+  }, []);
 
   return (
     <div className="photos">
