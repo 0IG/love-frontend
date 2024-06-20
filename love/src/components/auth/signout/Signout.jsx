@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import UserDetails from "../userDetails/UserDetails";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
+import "./Signout.scss";
 
 const Signout = () => {
   const [user, setUser] = useState(null);
@@ -40,6 +42,7 @@ const Signout = () => {
       ) : (
         <p>Signed Out</p>
       )}
+      <UserDetails className="signout__userDetails" />
     </div>
   );
 };
