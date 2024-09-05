@@ -29,5 +29,3 @@ export default function App() {
   );
 }
 
-// Testing Arch Laptop Security
-// Test 2 Arch GNOME keyring
